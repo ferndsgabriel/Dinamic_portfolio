@@ -1,0 +1,157 @@
+.header{
+    width: 100%;
+    height: 6.4rem;
+    background-color: var(--Primary);
+}
+.hamburguer{
+    position: fixed;
+    top: 1.6rem;
+    right: 1.6rem;
+    z-index: 999;
+    padding: 0.8rem;
+    border-radius: 100%;
+    animation: hamburguer 0.5s ease forwards;
+    opacity: 0;
+    transition: 0.6s ease all;
+    background-color: var(--Secondary2);
+}
+.hamburguer:hover{
+    background-color: var(--Secondary);
+    box-shadow: 2px 2px 10px black;
+}
+.hamburguer img {
+    width: 4rem;
+}
+@keyframes hamburguer {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 1.6rem;
+    max-width: 1366px;
+    margin: auto;
+    position: relative;
+}
+.header .container span{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.header .container svg{
+    font-size: 2.4rem;
+    color: var(--Secondary);
+}
+h1{
+    font-size: 4.2rem;
+}
+
+.navArea{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 50rem;
+    background-color: var(--Primary);
+    z-index: 99;
+    overflow: hidden;
+    padding: 0 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: nav 0.8s ease forwards;
+    opacity: 0;
+    box-shadow: 2px 2px 10px black;
+}
+@keyframes nav {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navArea .closeArea{
+    padding: 1.6rem;
+    border-bottom: 2px solid var(--Primary2);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+.navArea .closeArea button{
+    font-size: 2.4rem;
+    color: var(--Secondary);
+    transition: all .2s ease;
+}
+.navArea .closeArea button:hover{
+    transform: scale(1.4);
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.navList a {
+    font-size: 2.4rem;
+    transition: all .2s ease;
+}
+.navList a:hover{
+    transform: translateX(20px);
+}
+.labelbuttonTheme{
+    cursor: pointer;
+}
+.buttonTheme{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--Primary);
+    box-shadow: 2px 2px 10px rgb(54, 54, 54);
+    height: 3.4rem;
+    width: 8rem;
+    border-radius: 20px;
+    padding: 0.4rem;
+    display: flex;
+}
+.buttonTheme svg{
+    font-size: 2.4rem;
+    background-color: rgb(247, 175, 69);
+    border-radius: 100px;
+    color: white;
+    padding: 0.4rem;
+}
+.checkbox{
+    display: none;
+}
+.checkbox:checked ~ .buttonTheme  {
+    justify-content: end;
+}
+.checkbox:checked ~ .buttonTheme svg {
+    background-color: gray;
+}
+
+.navArea .copy{
+    border-top: 2px solid var(--Primary2);
+    padding: 1.6rem;
+    width: 100%;
+}
