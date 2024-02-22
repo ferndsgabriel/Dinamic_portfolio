@@ -132,7 +132,6 @@ export default function Home(){
             <main className="main">
                 {about ?(
                     <section className="section1">
-                        <span className='name animateInvisible'>{about.Name}</span>
                         <div className="section1Container">
                                 <h1 className='h1-1 animateOpenLeft'>I'm</h1>
                                 <h1 className='h1-2 animateOpenLeft'>
