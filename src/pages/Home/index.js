@@ -143,7 +143,7 @@ export default function Home(){
                 ):null}
 
                 {about ? (
-                    <section className='section2'>
+                    <section className='section2' id='about'>
                         <div className='section2Container'>
                             <h2 className='animateOpenRight'>About me</h2>
                             <div className='AreaItens'>
@@ -199,7 +199,7 @@ export default function Home(){
                 ):null}
 
                 {projects.length > 0 ?(
-                    <section className='section4'>
+                    <section className='section4' id='projects'>
                         <div className='section4Container'>
                             <h2 className='animateOpenRight'>Projects</h2>
                             <div className='containerProjects animationFilterProject' ref={projectsContainerRef}>
