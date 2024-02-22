@@ -150,7 +150,6 @@
 .projectsArea{
     display: flex;
     flex-direction: column;
-    align-items: start;
     gap: 2.4rem;
     border-top: 2px solid var(--Primary);
     padding-top: 1.2rem;
@@ -179,24 +178,31 @@
 .projectsLinks a:hover{
     opacity: 0.5;
 }
-.projectsArea .imgMask{
-    width: 28rem;
-    aspect-ratio: 16/9;
-    background-color: transparent;
-    border: 4px solid var(--Secondary);
-    position: relative;
+.imgProjectArea{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
     margin-top: 1.5rem;
 }
+.imgProjectArea .imgMask{
+    width: 36rem;
+    background-color: transparent;
+    aspect-ratio: 16/9;
+    display: block;
+    border: solid 4px var(--Secondary);
+    position: relative;
+}
 .projectsArea .imgMask2{
-    background-color: aquamarine;
     position: absolute;
     width: 100%;
     height: 100%;
-    display: block;
-    transform: translate(15px, -15px);
+    transform: translate(15px ,-15px);
 }
 .projectsArea .imgMask2 img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -253,10 +259,29 @@
     }
     .projectsArea{
         flex-direction: row;
+        justify-content: space-between;
+    }
+    .imgProjectArea{
+        justify-content: end;
     }
     .projectsArea .imgMask{
         transform: translate(-15px, 15px);
     }
+    .projectsArea:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    .projectsArea:nth-child(even) .projectsInfo{
+        align-items: end;
+        text-align: start;
+    }
+    .projectsArea:nth-child(even) .imgProjectArea{
+        justify-content: start;
+    }
+    .projectsArea:nth-child(even) .imgProjectArea .imgMask{
+        transform: translate(0px, 15px);
+    }
+
+
 }
 
 

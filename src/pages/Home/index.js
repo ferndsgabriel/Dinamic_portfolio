@@ -215,11 +215,14 @@ export default function Home(){
                                                     <a href={item.Deploy} target='_Blank'><FaArrowRight /> Project</a>
                                                 </div>
                                             </div>
-                                            <span className='imgMask'>
-                                                <span className='imgMask2'>
-                                                        <img src={item.Image} alt={item.Name}/>
+                                            <div className='imgProjectArea'>
+                                                <span className='imgMask'>
+                                                    <span className='imgMask2'>
+                                                            <img src={item.Image} alt={item.Name}/>
+                                                    </span>
                                                 </span>
-                                            </span>
+                                            </div>
+
                                         </article>
                                     )
                                 })}
