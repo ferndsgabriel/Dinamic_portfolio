@@ -139,13 +139,13 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 6.4rem;
     margin-bottom: 10rem;
 }
 .containerProjects{
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 3.6rem;
 }
 .projectsArea{
     display: flex;
