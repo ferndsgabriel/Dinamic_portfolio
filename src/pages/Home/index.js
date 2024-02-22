@@ -34,7 +34,7 @@ export default function Home(){
             } finally {
                 setTimeout(()=>{
                     setLoading(false);
-                },2000)
+                },2500)
             }
         };
         fetchData();

@@ -19,7 +19,7 @@
     transform: rotate(-10deg);
     color: var(--Primary);
     text-shadow: 2px 2px 0px var(--Primary3);
-    overflow: hidden;
+    overflow-x: hidden;
     z-index: -1;
     user-select: none;
 }
@@ -198,6 +198,7 @@
     border: 4px solid var(--Secondary);
     position: relative;
     margin-top: 1.5rem;
+    transform: translate(-15px, 15px);
 }
 .projectsArea .imgMask2{
     background-color: aquamarine;

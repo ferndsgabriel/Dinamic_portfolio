@@ -28,7 +28,7 @@ export default function Loading() {
     }, [index, allHellos.length]);
 
     const hellosIdiomues = () => {
-        return <span style={{fontSize:'24px'}} translate="no">{allHellos[index]}</span>;
+        return <span style={{fontSize:'24px'}} translate="no">● {allHellos[index]}</span>;
     };
 
     return (
