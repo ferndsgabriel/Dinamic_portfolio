@@ -1,7 +1,7 @@
  ### Portfolio - Frontend ✍🏼
 
 
-[![Blog](https://img.shields.io/website?label=Deploy&style=for-the-badge&url=https://salaocondoadm.vercel.app/)](https://salaocondoadm.vercel.app/)
+[![Blog](https://img.shields.io/website?label=Deploy&style=for-the-badge&url=https://ferndsgabriel.dev/)](https://ferndsgabriel.dev/)
 
 <div>
     <h2>About 🚨</h2>
