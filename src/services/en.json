@@ -1,97 +1,82 @@
 {
-    "Perfil":"https://lh3.googleusercontent.com/d/19Cgz92iV2J5Y5K6wuiCezdWd_0OX2hm1",
+    "Perfil": "https://lh3.googleusercontent.com/d/19Cgz92iV2J5Y5K6wuiCezdWd_0OX2hm1",
     "Presentation": {
         "Resume": "Gabriel, a web developer"
     },
     "About": {
         "Name": "Gabriel da Silva Fernandes",
-        "Text": "I am a web developer based in São Paulo, Brazil, and I started my journey at the college of Information Technology Management in 2022. I began with a focus on frontend development, creating intuitive and responsive interfaces, and over time, I delved into backend technologies to become a full stack developer. This portfolio reflects my journey, highlighting my skills and experiences on both sides of web development."
+        "Text": "I am a web developer, residing in São Paulo, Brazil, and started my journey in Information Technology Management college in 2022. I began focusing on frontend development, creating intuitive and responsive interfaces, and over time, I delved into backend technologies to become a full stack developer. This portfolio reflects my journey, highlighting my skills and experiences on both sides of web development."
     },
     "Links": [
-        { "Name": "Instagram", "Url": "https://www.instagram.com/ferndsgabriel" },
-        { "Name": "Linkedin", "Url": "https://www.linkedin.com/in/ferndsgabriel" },
-        { "Name": "GitHub", "Url": "https://github.com/ferndsgabriel" },
-        { "Name": "Phone", "Url": "tel:+5511992751620" },
-        { "Name": "Whatsapp", "Url": "https://api.whatsapp.com/send?phone=5511992751620" }
+        {"Name": "Instagram", "Url": "https://www.instagram.com/ferndsgabriel"},
+        {"Name": "Linkedin", "Url": "https://www.linkedin.com/in/ferndsgabriel"},
+        {"Name": "GitHub", "Url": "https://github.com/ferndsgabriel"},
+        {"Name": "Phone", "Url": "tel:+5511992751620"},
+        {"Name": "Whatsapp", "Url": "https://api.whatsapp.com/send?phone=5511992751620"}
     ],
     "Skills": {
-        "Items": [
-            { "Name": "HTML", "Url": "https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5" },
-            { "Name": "CSS", "Url": "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk" },
-            { "Name": "JavaScript", "Url": "https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm" },
-            { "Name": "NodeJS", "Url": "https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef" },
-            { "Name": "TypeScript", "Url": "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU" },
-            { "Name": "SASS", "Url": "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy" },
-            { "Name": "Tailwind CSS", "Url": "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku" },
-            { "Name": "GitHub", "Url": "https://lh3.googleusercontent.com/d/130Ah2I9-hKKp5-6CiF08AXRGzWVbv5m1" },
-            { "Name": "Git", "Url": "https://lh3.googleusercontent.com/d/1B79rxiceuYX_EtSMXBxwQb44qwAsI7V_" },
-            { "Name": "ReactJS", "Url": "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w" },
-            { "Name": "NextJS", "Url": "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d" },
-            { "Name": "Firebase", "Url": "https://lh3.googleusercontent.com/d/1KafeHRerYz5B19Mj9gBlsvTFVmd_I2n1" }
+        "Itens": [
+            {"Name": "HTML", "Url": "https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5"},
+            {"Name": "CSS", "Url": "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk"},
+            {"Name": "JavaScript", "Url": "https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm"},
+            {"Name": "NodeJS", "Url": "https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef"},
+            {"Name": "TypeScript", "Url": "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU"},
+            {"Name": "SASS", "Url": "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"},
+            {"Name": "Tailwind CSS", "Url": "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"},
+            {"Name": "GitHub", "Url": "https://lh3.googleusercontent.com/d/130Ah2I9-hKKp5-6CiF08AXRGzWVbv5m1"},
+            {"Name": "Git", "Url": "https://lh3.googleusercontent.com/d/1B79rxiceuYX_EtSMXBxwQb44qwAsI7V_"},
+            {"Name": "ReactJS", "Url": "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w"},
+            {"Name": "NextJS", "Url": "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d"},
+            {"Name": "Firebase", "Url": "https://lh3.googleusercontent.com/d/1KafeHRerYz5B19Mj9gBlsvTFVmd_I2n1"}
         ]
     },
     "Projects": {
-        "Items": [
-            {
-                "Name": "SalãoCondo Resident",
-                "Technologies": [
-                    "https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef",
-                    "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
-                    "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d",
-                    "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"
-                ],
-                "Image": "https://lh3.googleusercontent.com/d/1h8h6RLLFh6CBAQZ8gfTZOKJagGuDJ_r8",
-                "GitHub": "https://github.com/ferndsgabriel/SCuser_Frontend",
-                "Deploy": "https://salaocondo.vercel.app",
-                "Description": "This is the SalãoCondo project for residents, which allows them to register and log in, access the reservation calendar, make reservations, and manage the guest list."
+        "Itens": [
+            {"Name": "SalãoCondo Resident", 
+            "Technologies": ["https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef",
+            "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
+            "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d", 
+            "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"], 
+            "Image": "https://lh3.googleusercontent.com/d/1h8h6RLLFh6CBAQZ8gfTZOKJagGuDJ_r8", 
+            "GitHub": "https://github.com/ferndsgabriel/SCuser_Frontend", 
+            "Deploy": "https://salaocondo.vercel.app",
+            "Description": "This is the SalãoCondo Resident project, developed for residents, which allows for registration and login, accessing the reservation calendar, making reservations, and managing the guest list."
             },
-            {
-                "Name": "SalãoCondo Administrator",
-                "Technologies": [
-                    "https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef",
-                    "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
-                    "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d",
-                    "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"
-                ],
-                "Image": "https://lh3.googleusercontent.com/d/10PeYyN0gRltY1FI9mGvaNVCnw68GZro6",
-                "GitHub": "https://github.com/ferndsgabriel/SCadm_Frontend",
-                "Deploy": "https://salaocondoadm.vercel.app",
-                "Description": "This is the SalãoCondo project for administrators. It allows for resident management and payment status control, which must be up to date for reservations to be made. Additionally, it offers reservation management, access to the guest list, and a dashboard with insights."
+
+            {"Name": "SalãoCondo Administrator", 
+            "Technologies": ["https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef",
+            "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
+            "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d", 
+            "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"], 
+            "Image": "https://lh3.googleusercontent.com/d/10PeYyN0gRltY1FI9mGvaNVCnw68GZro6", 
+            "GitHub": "https://github.com/ferndsgabriel/SCadm_Frontend", 
+            "Deploy": "https://salaocondoadm.vercel.app",
+            "Description": "This is the SalãoCondo Administrator project, developed for administrators. It allows for controlling residents and managing payment statuses, which must be up to date for reservations to be made. Additionally, it offers reservation management, guest list access, and a dashboard with insights."
             },
-            {
-                "Name": "English Cast",
-                "Technologies": [
-                    "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w",
-                    "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk",
-                    "https://lh3.googleusercontent.com/d/1KafeHRerYz5B19Mj9gBlsvTFVmd_I2n1"
-                ],
-                "Image": "https://lh3.googleusercontent.com/d/1SpP639H9i1fhQzPimYhmtUqgYq5OUxGi",
-                "GitHub": "https://github.com/ferndsgabriel/English-cast",
-                "Deploy": "https://englishcast.vercel.app",
-                "Description": "This is my English Cast project where you can publish English audio, access audio published by other users, listen to them, manage them in your playlists, and improve your English skills. The audios are classified by English proficiency levels."
+            
+            {"Name": "English Cast", 
+            "Technologies": ["https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w", 
+            "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk", 
+            "https://lh3.googleusercontent.com/d/1KafeHRerYz5B19Mj9gBlsvTFVmd_I2n1"], 
+            "Image": "https://lh3.googleusercontent.com/d/1SpP639H9i1fhQzPimYhmtUqgYq5OUxGi", 
+            "GitHub": "https://github.com/ferndsgabriel/English-cast", 
+            "Deploy": "https://englishcast.vercel.app",
+            "Description": "This is my English Cast project, where you can publish English audios, access audios published by other users, listen to them, manage them in your playlists, and improve your English skills. The audios are classified into proficiency levels."
             },
-            {
-                "Name": "New Tech TVS",
-                "Technologies": [
-                    "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w",
-                    "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"
-                ],
-                "Image": "https://lh3.googleusercontent.com/d/10oVZwGlLw2sumFhZmdm0ebSD-pq0CKFs",
-                "GitHub": "https://github.com/ferndsgabriel/NewTechTVS",
-                "Deploy": "https://newtechtvs.vercel.app/",
-                "Description": "NewTech TVS is a landing page developed for a television repair service. The project features contact links, information about the services offered, and customer reviews."
+
+            {"Name": "New Tech TVS", "Technologies": ["https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w",
+            "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"], 
+            "Image": "https://lh3.googleusercontent.com/d/10oVZwGlLw2sumFhZmdm0ebSD-pq0CKFs", 
+            "GitHub": "https://github.com/ferndsgabriel/NewTechTVS", 
+            "Deploy": "https://newtechtvs.vercel.app/",
+            "Description": "NewTech TVS is a landing page developed for a television repair service. The project features contact links, information about the services offered, and customer reviews."
             },
-            {
-                "Name": "Wpp Link",
-                "Technologies": [
-                    "https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5",
-                    "https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm",
-                    "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"
-                ],
-                "Image": "https://lh3.googleusercontent.com/d/1J2mz8NATQOAuLmO-zpWnrd2Vf-Wn7dBec",
-                "GitHub": "https://github.com/ferndsgabriel/wppLink",
-                "Deploy": "https://wpp-link.vercel.app",
-                "Description": "Wpp Link is a simple project developed to create a link for sharing WhatsApp contacts."
+
+            {"Name": "Wpp Link", "Technologies": ["https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5","https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm","https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"], 
+            "Image": "https://lh3.googleusercontent.com/d/1J2mz8NATQOAuLmO-zpYTdl3N36GSz97v", 
+            "GitHub": "https://github.com/ferndsgabriel/wppLinkGenerator", 
+            "Deploy": "https://linkgeneratorwpp.vercel.app/",
+            "Description": "This project generates WhatsApp links using the provided phone numbers and custom messages, to facilitate contact with businesses."
             }
         ]
     },
@@ -100,31 +85,31 @@
             "Name": "Extreme English",
             "Image": "https://lh3.googleusercontent.com/d/1C4Mu0C_51XXvFoCMsAvu8zAK0AsqmqCS",
             "Link": "https://www.udemy.com/share/101WxI3@N0n9APWFs8J8e38w8YOBDuYwkaZydWofKq-SZtYnNUhSzRW43RuYkg5GkscrcKnBFA==/",
-            "Description": "Improving my English is one of my life goals. This course was crucial in opening doors to the language. Thanks to it, I faced the challenge of learning English, acquired basic and intermediate knowledge, and have already started taking more advanced courses."
+            "Description": "Improving my English is one of my life goals. This course was essential in opening doors to the language. Thanks to it, I faced the challenge of learning English, acquired basic and intermediate knowledge, and have already started more advanced courses."
         },
         {
-            "Name": "Tailwind CSS from Zero to Advanced",
+            "Name": "Tailwind CSS from Scratch to Advanced",
             "Image": "https://lh3.googleusercontent.com/d/1nMaJCMsfCnldXNxL6NOB5HwS7sVjyO67",
             "Link": "https://www.udemy.com/share/109H6U3@Kk6vs6SE4DZp6dqSjkmyiokXtuV-emSI_ZYesux07bjrXO_f5j4ILXC1nkkDKuU1Fw==/",
-            "Description": "Deciding to learn Tailwind CSS was one of the best choices I made. Tailwind is amazing and allows for agile and organized styling. The course is top-notch, and Matheus Fraga's teaching is excellent."
+            "Description": "Deciding to learn Tailwind CSS was one of the best choices I've made. Tailwind is incredible and allows for agile and organized styling. The course is top-notch, and Matheus Fraga's teaching is excellent."
         },
         {
             "Name": "PRO FIGMA | UI DESIGN",
             "Image": "https://lh3.googleusercontent.com/d/10On972Fnyj1CP7NWpNp-vEs2vB_Y2HVH",
             "Link": "https://www.udemy.com/share/1073q43@zo2Q4Wv4jag4i2rJIP7quf6CVr0jwUEeB2uUcV1zbUTjY1GH1YCWvVtI_kw0YIFCAg==/",
-            "Description": "One of the major challenges in creating an application is understanding how to position items and design a beautiful and functional layout. With this course, I learned layout rules and how to use Figma for prototyping, which allows me to save time during development."
+            "Description": "One of the major challenges in creating an application is understanding how to position items and design a beautiful and functional layout. This course taught me layout rules and how to use Figma for prototypes, which helps me save time during development."
         },
         {
             "Name": "NodeJS, React, React Native, TypeScript",
             "Image": "https://lh3.googleusercontent.com/d/1osnFK32zV3-6Jn1m78PkO7pmMmJivmUF",
             "Link": "https://www.udemy.com/share/106djC3@q0p8P-r1k9969MGQO5QL04NJidd9y-oTR55IQ2THtQhHJSCbRYxm2lE-9TpkpUOx5A==/",
-            "Description": "This course was fundamental to my growth, as it not only taught me TypeScript but also covered frameworks and Node.js. It enabled me to develop fullstack projects. With the knowledge gained, I reached a new level of skills and was able to create more complex projects, understanding how CRUD operations and data manipulation work on the frontend."
+            "Description": "This course was crucial for my development, as it not only taught me TypeScript but also covered frameworks and Node.js. This enabled me to develop full-stack projects. With the knowledge gained, I reached a new level of skills and was able to create more complex projects, understanding how CRUD and data manipulation on the frontend interact."
         },
         {
             "Name": "Web Frontend Fundamentals HTML CSS JS",
             "Image": "https://lh3.googleusercontent.com/d/1VN1wTIfiWuL2xF94PK6eebsRRjKpShu-",
             "Link": "https://www.udemy.com/share/101sRi3@qTT646zEt3b8gs3cECduAQp35diq1gUl9qJVitg8PQqgQ2ULNDirHqJ8u1twCvVNpA==/",
-            "Description": "This was my first course focused on front-end development. The course includes many detailed lessons on the three main technologies for web development. It provided me with the opportunity to learn how web pages are created and how to develop them."
+            "Description": "This was my first course focused on frontend development. The course includes many detailed lessons and sessions on the three main web development technologies. It provided me the opportunity to learn how web pages are created and how to develop them."
         }
     ]
 }
