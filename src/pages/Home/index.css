@@ -118,7 +118,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: start;
-    justify-items: start;
+    justify-content: space-between;
     gap: 3.2rem;
 }
 .skillsArea{
@@ -129,7 +129,8 @@
     border-radius: 10px;
 }
 .skillsArea img{
-    width: 8rem;
+    width: 100%;
+    max-width: 8rem;
     background-color: var(--White);
     padding: 1.8rem;
     border-radius: 5px;
@@ -148,10 +149,11 @@
     background-color: var(--Primary4);
     display: block;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0.8rem;
     text-align: end;
     border-radius:0px 15px 15px 0px;
     margin-left: -1.6rem;
+    font-size: 1.4rem;
 }
 
 
