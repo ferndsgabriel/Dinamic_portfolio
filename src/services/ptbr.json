@@ -1,0 +1,146 @@
+
+{
+    "Perfil":"https://lh3.googleusercontent.com/d/19Cgz92iV2J5Y5K6wuiCezdWd_0OX2hm1",
+    "Presentation":{
+        "Resume":"Gabriel, um programador web"
+    },
+    "About":{
+        "Name":"Gabriel da Silva Fernandes",
+        "Text":"Sou desenvolvedor web, residente em São Paulo, Brasil, e iniciei minha jornada na faculdade de Gestão de Tecnologia da Informação em 2022. Comecei focando no desenvolvimento frontend, criando interfaces intuitivas e responsivas, e ao longo do tempo, mergulhei nas tecnologias de backend para me tornar um desenvolvedor full stack. Este portfólio reflete minha trajetória, destacando minhas habilidades e experiências em ambos os lados do desenvolvimento web."
+    },
+    "Links":[
+        {"Name":"Instagram", "Url":"https://www.instagram.com/ferndsgabriel"},
+        {"Name":"Linkedin", "Url":"https://www.linkedin.com/in/ferndsgabriel"},
+        {"Name":"GitHub", "Url":"https://github.com/ferndsgabriel"},
+        {"Name":"Telefone", "Url":"tel:+5511992751620"},
+        {"Name":"Whatsapp", "Url":"https://api.whatsapp.com/send?phone=5511992751620"}
+    ],
+    "Skills":{
+        "Itens":[
+            {"Name":"HTML", "Url":"https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5"},
+            {"Name":"CSS", "Url":"https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk"},
+            {"Name":"JavaScript", "Url":"https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm"},
+            {"Name":"NodeJS", "Url":"https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef"},
+            {"Name":"TypeScript", "Url":"https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU"},
+            {"Name":"SASS", "Url":"https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"},
+            {"Name":"Tailwind CSS", "Url":"https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"},
+            {"Name":"GitHub", "Url":"https://lh3.googleusercontent.com/d/130Ah2I9-hKKp5-6CiF08AXRGzWVbv5m1"},
+            {"Name":"Git", "Url":"https://lh3.googleusercontent.com/d/1B79rxiceuYX_EtSMXBxwQb44qwAsI7V_"},
+            {"Name":"ReactJS", "Url":"https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w"},
+            {"Name":"NextJS", "Url":"https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d"},
+            {"Name":"Firebase", "Url":"https://lh3.googleusercontent.com/d/1KafeHRerYz5B19Mj9gBlsvTFVmd_I2n1"}
+        ]
+    },
+    "Projects":{
+        "Itens":[
+            {"Name":"SalãoCondo Morador", 
+            "Technologies":["https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef",
+            "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
+            "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d", 
+            "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"], 
+            "Image":"https://lh3.googleusercontent.com/d/1h8h6RLLFh6CBAQZ8gfTZOKJagGuDJ_r8", 
+            "GitHub":"https://github.com/ferndsgabriel/SCuser_Frontend", 
+            "Deploy":"https://salaocondo.vercel.app",
+            "Description":"Este é o projeto SalãoCondo, desenvolvido para os moradores, que permite cadastrar e fazer login, acessar o calendário de reservas, realizar reservas e gerenciar a lista de convidados."
+            },
+
+            {"Name":"SalãoCondo Adminstrador", 
+            "Technologies":["https://lh3.googleusercontent.com/d/1CWX7qwGnWix_GRq4dZHs32Gcieka4qef",
+            "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
+            "https://lh3.googleusercontent.com/d/1W4BEA_ZcMllbYndkiXuOugnynlOTgo5d", 
+            "https://lh3.googleusercontent.com/d/1qilnjLDNvVcLDhxqtDy_utFUDBlAQ2iy"], 
+            "Image":"https://lh3.googleusercontent.com/d/10PeYyN0gRltY1FI9mGvaNVCnw68GZro6", 
+            "GitHub":"https://github.com/ferndsgabriel/SCadm_Frontend", 
+            "Deploy":"https://salaocondoadm.vercel.app",
+            "Description":"Este é o projeto SalãoCondo, desenvolvido para administradores. Ele permite o controle dos moradores e o gerenciamento do status de pagamentos, que deve estar em dia para que possam ser feitas reservas. Além disso, oferece a gestão das reservas, acesso à lista de convidados e um dashboard com insights."
+            },
+            
+            {"Name":"English Cast", 
+            "Technologies":["https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w", 
+            "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk", 
+            "https://lh3.googleusercontent.com/d/1KafeHRerYz5B19Mj9gBlsvTFVmd_I2n1"], 
+            "Image":"https://lh3.googleusercontent.com/d/1SpP639H9i1fhQzPimYhmtUqgYq5OUxGi", 
+            "GitHub":"https://github.com/ferndsgabriel/English-cast", 
+            "Deploy":"https://englishcast.vercel.app",
+            "Description":"Este é o meu projeto English Cast, onde você pode publicar áudios em inglês, acessar áudios publicados por outros usuários, ouvi-los, gerenciá-los em suas playlists e melhorar suas habilidades em inglês. Os áudios são classificados em níveis de proficiência em inglês."
+            },
+
+            {"Name":"New Tech TVS", "Technologies":["https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w",
+            "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"], 
+            "Image":"https://lh3.googleusercontent.com/d/10oVZwGlLw2sumFhZmdm0ebSD-pq0CKFs", 
+            "GitHub":"https://github.com/ferndsgabriel/NewTechTVS", 
+            "Deploy":"https://newtechtvs.vercel.app/",
+            "Description":"NewTech TVS é uma landing page desenvolvida para uma assistência técnica de televisores. O projeto apresenta links de contato, informações sobre os serviços oferecidos e avaliações dos clientes."
+            },
+
+            {"Name":"Wpp Link", "Technologies":["https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5","https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm","https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"], 
+            "Image":"https://lh3.googleusercontent.com/d/1J2mz8NATQOAuLmO-zpYTdl3N36GSz97v", 
+            "GitHub":"https://github.com/ferndsgabriel/wppLinkGenerator", 
+            "Deploy":"https://linkgeneratorwpp.vercel.app/",
+            "Description":"Este é um gerador de links rápidos para o WhatsApp, com a possibilidade de visualizar o resultado e gerar um QR code."
+            },
+
+            {"Name":"Palmeiras Game", "Technologies":["https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk","https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU","https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w"], 
+            "Image":"https://lh3.googleusercontent.com/d/1Qfz7GN1KF9Yf_4MXuQX_aLv7nEH5J8sI", 
+            "GitHub":"https://github.com/ferndsgabriel/Palmeiras_Game", 
+            "Deploy":"https://palmeiras-game.vercel.app/",
+            "Description":"Este é um simples jogo de adivinhação com o tema do time de futebol brasileiro Palmeiras. O projeto é simples, mas divertido."
+            },
+
+            {"Name":"Joken-Po",  "Technologies":["https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk","https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w"], 
+            "Image":"https://lh3.googleusercontent.com/d/1OjNKqbnoeKiy_us3hZ5snLI47IWqvh_I", 
+            "GitHub":"https://github.com/ferndsgabriel/JokenPo", 
+            "Deploy":"https://thejokenpo.vercel.app/",
+            "Description":"Este é um jogo de Jokenpô com interatividade. Você pode jogar contra a máquina e testar a sua sorte."
+            },
+
+            {"Name":"Linha de aprendizagem", "Technologies":["https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5", "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk", "https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm"], 
+            "Image":"https://lh3.googleusercontent.com/d/1cHWJq3TnKDOBAhZEmy6zofoS6DlSIxq4", 
+            "GitHub":"https://github.com/ferndsgabriel/LearningLine", 
+            "Deploy":"https://learningline.vercel.app/",
+            "Description":"Uma paisagem interativa, inspirada no estilo do jogo Mario, onde o personagem avança pelas tecnologias que aprendi. A cada etapa, novas tecnologias são apresentadas de forma lúdica."
+            },
+
+            {"Name":"Insta valorant", "Technologies":["https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU","https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w",
+            "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"], 
+            "Image":"https://lh3.googleusercontent.com/d/1nliapH_964IHUyeVY-fKEF1J3T2jeo5P", 
+            "GitHub":"https://github.com/ferndsgabriel/Insta_Valorant", 
+            "Deploy":"https://instagramvalorant.vercel.app/",
+            "Description":"Este é um projeto que se inspira no feed do Instagram, mas com posts e stories de agentes do Valorant. No projeto, é possível interagir curtindo os posts e assistindo aos stories."
+            }
+        ]
+    },
+    "Certificates":[
+        
+        {"Name":"Inglês Extremo",
+        "Image":"https://lh3.googleusercontent.com/d/1C4Mu0C_51XXvFoCMsAvu8zAK0AsqmqCS", 
+        "Link":"https://www.udemy.com/share/101WxI3@N0n9APWFs8J8e38w8YOBDuYwkaZydWofKq-SZtYnNUhSzRW43RuYkg5GkscrcKnBFA==/",
+        "Description":"Evoluir no inglês é uma das minhas metas de vida. Este curso foi fundamental para abrir portas para o idioma. Graças a ele, enfrentei o desafio de aprender inglês, adquiri conhecimentos básicos e intermediários e já comecei a fazer cursos mais avançados."
+        },
+
+        {"Name":"Tailwind CSS do zero ao avançado",
+        "Image":"https://lh3.googleusercontent.com/d/1nMaJCMsfCnldXNxL6NOB5HwS7sVjyO67", 
+        "Link":"https://www.udemy.com/share/109H6U3@Kk6vs6SE4DZp6dqSjkmyiokXtuV-emSI_ZYesux07bjrXO_f5j4ILXC1nkkDKuU1Fw==/",
+        "Description":"Decidir aprender Tailwind CSS foi uma das melhores opções que tomei. Tailwind é incrível e permite estilizar de forma ágil e organizada. O curso é nota 10, e a didática do Matheus Fraga é excelente."
+        },
+
+        {"Name":"PRO FIGMA | UI DESIGN",
+        "Image":"https://lh3.googleusercontent.com/d/10On972Fnyj1CP7NWpNp-vEs2vB_Y2HVH", 
+        "Link":"https://www.udemy.com/share/1073q43@zo2Q4Wv4jag4i2rJIP7quf6CVr0jwUEeB2uUcV1zbUTjY1GH1YCWvVtI_kw0YIFCAg==/",
+        "Description":"Um dos grandes desafios ao criar uma aplicação é entender como posicionar os itens e elaborar um layout bonito e funcional. Com este curso, aprendi regras de layout e como usar o Figma para protótipos, o que me permite ganhar tempo durante o desenvolvimento."
+        },
+
+        {"Name":"NodeJS, React, React Native, TypeScript",
+        "Image":"https://lh3.googleusercontent.com/d/1osnFK32zV3-6Jn1m78PkO7pmMmJivmUF", 
+        "Link":"https://www.udemy.com/share/106djC3@q0p8P-r1k9969MGQO5QL04NJidd9y-oTR55IQ2THtQhHJSCbRYxm2lE-9TpkpUOx5A==/",
+        "Description":"Este curso foi fundamental para minha evolução, pois além de me ensinar TypeScript, também cobriu frameworks e Node.js. Isso me capacitou a desenvolver projetos fullstack. Com o conhecimento adquirido, alcancei um novo nível de habilidades e fui capaz de criar projetos mais complexos, entendendo como funciona a interação entre o CRUD e a manipulação de dados no frontend."
+        },
+
+
+        {"Name":"Web Frontend Fundamentos HTML CSS JS",
+        "Image":"https://lh3.googleusercontent.com/d/1VN1wTIfiWuL2xF94PK6eebsRRjKpShu-", 
+        "Link":"https://www.udemy.com/share/101sRi3@qTT646zEt3b8gs3cECduAQp35diq1gUl9qJVitg8PQqgQ2ULNDirHqJ8u1twCvVNpA==/",
+        "Description":"Este foi meu primeiro curso voltado para front-end. O curso inclui muitas aulas e sessões detalhadas sobre as três principais tecnologias para desenvolvimento web. Ele me proporcionou a oportunidade de aprender como as páginas web são criadas e como desenvolvê-las."
+        }
+    ]
+}

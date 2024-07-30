@@ -1,157 +1,152 @@
-.header{
-    width: 100%;
-    height: 6.4rem;
+.headerContainer{
     background-color: var(--Primary);
-}
-.hamburguer{
-    position: fixed;
-    top: 1.6rem;
-    right: 1.6rem;
-    z-index: 999;
-    padding: 0.8rem;
-    border-radius: 100%;
-    animation: hamburguer 0.5s ease forwards;
-    opacity: 0;
-    transition: 0.6s ease all;
-    background-color: var(--Secondary2);
-}
-.hamburguer:hover{
-    background-color: var(--Secondary);
-    box-shadow: 2px 2px 10px black;
-}
-.hamburguer img {
-    width: 4rem;
-}
-@keyframes hamburguer {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.header .container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    padding: 1.6rem;
-    max-width: 1366px;
-    margin: auto;
-    position: relative;
-}
-.header .container span{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem;
+    height: 60px;
+}
+.headerContainer h4{
     font-size: 1.2rem;
+    color:var(--Text);
+    font-weight: 100;
+    opacity: 0.8;
 }
-.header .container svg{
+.headerContainer button svg{
     font-size: 2.4rem;
-    color: var(--Secondary);
-}
-h1{
-    font-size: 4.2rem;
+    color:var(--Text);
 }
 
-.navArea{
+
+.navContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: var(--Primary);
+    box-shadow: 2px 2px 10px var(--Shadow);
+    width: 46.0rem;
+    z-index: 9999;
+    animation: forwards 0.5s ease openNav;
+    padding: 1.2rem;
+}
+.navContainer .close{
+    padding: 16px;
+}
+.navContainer .close svg{
+    font-size: 2.4rem;
+    color:var(--Text);
+}
+.navClose{
+    animation: forwards 0.5s ease closeNav;
+}
+
+.navContainer .ul{
+    width: 100%;
+    border-top:  solid 1px var(--Primary2);
+    border-bottom:  solid 1px var(--Primary2);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+    gap: 2.4rem;    
+}
+.buttonTheme{
+    height: 3.6rem;
+    width: 9.0rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    box-shadow: 2px 2px 10px var(--Shadow);
+}
+.buttonTheme svg{
+    font-size: 2rem;
+    
+    border-radius: 100%;
+}
+.buttonTheme .dark{
+    color:var(--Text)
+}
+.buttonTheme .light{
+    color: rgb(241, 201, 67);
+}
+
+.buttonLanguage{
+    height: 3.6rem;
+    width: 9.0rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 8px;
+    box-shadow: 2px 2px 10px var(--Shadow);
+    color: var(--Text);
+}
+.buttonLanguage p{
+    font-size: 1.2rem;
+}
+.buttonLanguage p b{
+    color: var(--Secondary);
+} 
+.buttonLanguage svg{
+    font-size: 1.6rem;
+    transform-style: preserve-3d;
+    animation: language 1s infinite linear; 
+}
+
+span{
+    padding: 16px;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.floatMenu{
+    padding: 16px;
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 100vh;
-    max-width: 50rem;
-    background-color: var(--Primary);
-    z-index: 99;
-    overflow: hidden;
-    padding: 0 1.6rem;
+    z-index: 9999;
+}
+.floatMenu div{
+    background-color: var(--Secondary2);
+    width: 3.6rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    animation: nav 0.8s ease forwards;
-    opacity: 0;
-    box-shadow: 2px 2px 10px black;
-}
-@keyframes nav {
-    0% {
-        opacity: 0;
-        transform: translateY(-200px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.navArea .closeArea{
-    padding: 1.6rem;
-    border-bottom: 2px solid var(--Primary2);
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
-}
-.navArea .closeArea button{
-    font-size: 2.4rem;
-    color: var(--Secondary);
-    transition: all .2s ease;
-}
-.navArea .closeArea button:hover{
-    transform: scale(1.4);
-}
-
-.navList {
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-    width: 100%;
-    height: auto;
     justify-content: center;
-}
-.navList a {
-    font-size: 2.4rem;
-    transition: all .2s ease;
-}
-.navList a:hover{
-    transform: translateX(20px);
-}
-.labelbuttonTheme{
     cursor: pointer;
+    &:hover{
+        background-color: var(--Secondary);
+    }
 }
-.buttonTheme{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    background-color: var(--Primary);
-    box-shadow: 2px 2px 10px rgb(54, 54, 54);
-    height: 3.4rem;
-    width: 8rem;
-    border-radius: 20px;
-    padding: 0.4rem;
-    display: flex;
-}
-.buttonTheme svg{
-    font-size: 2.4rem;
-    background-color: rgb(247, 175, 69);
-    border-radius: 100px;
-    color: white;
-    padding: 0.4rem;
-}
-.checkbox{
-    display: none;
-}
-.checkbox:checked ~ .buttonTheme  {
-    justify-content: end;
-}
-.checkbox:checked ~ .buttonTheme svg {
-    background-color: gray;
+.floatMenu div svg{
+    font-size: 2rem;
+    color: var(--Text);
 }
 
-.navArea .copy{
-    border-top: 2px solid var(--Primary2);
-    padding: 1.6rem;
-    width: 100%;
+
+
+@keyframes openNav{
+    0%{
+        transform: translateX(460px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes closeNav{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(460px);
+    }
 }

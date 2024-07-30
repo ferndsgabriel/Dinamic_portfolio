@@ -1,0 +1,20 @@
+.backToTop{
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    bottom: 0;
+    padding: 1.6rem;
+}
+.backToTop div{
+    background-color: var(--Shadow);
+    height:3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+.backToTop div svg{
+    font-size: 2rem;
+    color: var(--White);
+}

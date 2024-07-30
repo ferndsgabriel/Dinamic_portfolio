@@ -29,8 +29,8 @@ export default function ThemeProvider({ children }) {
         root.setProperty('--Secondary', !dark ? 'rgb(4,124,132)' : 'rgb(4,179,121)');
         root.setProperty('--Secondary2', !dark ? 'rgba(4,124,132,0.2)' : 'rgba(4,179,121,0.2)');
         root.setProperty('--Text', !dark ? 'rgb(0,0,0)' : 'rgb(255,255,255)');
-        root.setProperty('--Cursor', !dark ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.1)');
         root.setProperty('--Black', 'rgb(0,0,0)');
+        root.setProperty('--Shadow', 'rgba(0,0,0,0.5)');
         root.setProperty('--White','rgb(255,255,255)');
     }, [dark]);
 

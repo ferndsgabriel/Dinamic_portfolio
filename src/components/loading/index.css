@@ -1,0 +1,12 @@
+.containerLoading{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--Primary);
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    z-index: 999999999999;
+}

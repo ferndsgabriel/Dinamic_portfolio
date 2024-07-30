@@ -4,18 +4,19 @@
   box-sizing: border-box;
   outline: none;
   border: none;
+  scroll-behavior: smooth;
 }
+
 
 body{
   overflow-x: hidden;
   background-color:var(--Primary);
   color: var(--Text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: sans-serif;
 }
 
 html{
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 p, a {
@@ -47,7 +48,7 @@ button{
 button, a {
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease-in-out;
 }
 a{
   text-decoration: none;
@@ -62,20 +63,7 @@ img{
 .animationBackground{
   display: none;
 }
-@media (min-width:768px){
-  .animationBackground{
-    background-color: var(--Cursor);
-    display: block;
-    width: 40rem;
-    aspect-ratio: 1/1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 1000px;
-    filter: blur(100px);
-    transition: 0.2s ease;
-}
-}
+
 ::-webkit-scrollbar {
   width: 10px; 
 }
@@ -85,11 +73,83 @@ img{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--Cursor);
+  background-color: var(--Secondary);
   border-radius: 6px;
 }
 
 ::selection{
   background-color: var(--Secondary);
   color: var(--Primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: all 999999999999999999999999999999999999999999999999999999999999s ease-in-out 0s; 
+  background-color: transparent !important;
+  color: var(--Text);
 }

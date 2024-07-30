@@ -1,108 +1,111 @@
 import "./index.css";
-import { IoMdMenu  } from "react-icons/io";
-import { IoSunnyOutline,IoMoonOutline } from "react-icons/io5";
-import { MdOutlineClose } from "react-icons/md";
-import { ThemeContext } from "../../middlewares/themeColor";
-import { useContext, useState, useEffect, useRef } from "react";
+import { MdOutlineMenu, MdOutlineClose, MdLightMode } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
+import { useRef, useState, useContext, useEffect } from "react";
+import { ThemeContext } from "../../contexts/themeColor";
+import { LanguageContext } from "../../contexts/languageControl";
 
-
-export default function Header ({value}){
-    const {dark, changeThemes} = useContext(ThemeContext);
-    const [openNav, setOpenNav] = useState(false);
-    const [thereScroll, setThereScroll] = useState(false);
+export default function Header({ value }) {
+    const [isOpenNav, setIsOpenNav] = useState(false);
     const navRef = useRef(null);
+    const { dark, changeThemes } = useContext(ThemeContext);
+    const { isBr, changeLanguage } = useContext(LanguageContext);
+    const [isVisible, setIsVisible] = useState(false);
 
-    const handleOpenNav = () =>{
-        setOpenNav(true);
-        document.documentElement.classList.add('removeScroll')
+    function closeNav() {
+        navRef.current?.classList.add('navClose');
+        setTimeout(() => {
+            setIsOpenNav(false);
+            navRef.current?.classList.remove('navClose');
+        }, 500);
     }
-    
-    const handleCloseNav = () =>{
-        setOpenNav(false);
-        document.documentElement.classList.remove('removeScroll')
+
+    function handleClickOutside(event) {
+        if (navRef.current && !navRef.current.contains(event.target)) {
+            closeNav();
+        }
     }
+
+    function handleKeyDown(event) {
+        if (event.key === "Escape") {
+            closeNav();
+        }
+    }
+
     useEffect(() => {
-        const scrollValue = () => {
-            const scrollValue = window.scrollY.toFixed();
-            if (scrollValue > 200) {
-                setThereScroll(true);
-            } else {
-                setThereScroll(false);
-            }
-        };
-
-        window.addEventListener("scroll", scrollValue);
-
+        if (isOpenNav) {
+            document.addEventListener("mousedown", handleClickOutside);
+            document.addEventListener("keydown", handleKeyDown);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleKeyDown);
+        }
         return () => {
-            window.removeEventListener("scroll", scrollValue);
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleKeyDown);
         };
+    }, [isOpenNav]);
 
-    }, []);
-    
-    useEffect(()=>{
-        const thereEscKey = (e) =>{
-            if (e.key === 'Escape'){
-                handleCloseNav();
+    useEffect(() => {
+        function handleScroll () {
+            if (window.scrollY > 400){
+                setIsVisible(true);
+            }else{
+                setIsVisible(false);
             }
-        }
-
-        if (openNav){
-            document.addEventListener('keydown', thereEscKey);
-        }
-
-        return (()=>{
-            document.removeEventListener('keydown', thereEscKey);
-        })
-        
-    },[openNav]);
-
-
+        };
     
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <header className='header'>
-                {thereScroll?(
-                    <>
-                        {openNav? null:(
-                            <button className="hamburguer" onClick={handleOpenNav}>
-                                <img src="./burguer.png" alt="hamburguer icon"/>                        
-                            </button>
-                        )}
-                    </>
-                ):(
-                    <div className="container">
-                        <span>&copy;By {value}</span>
-                        <button  onClick={handleOpenNav}><IoMdMenu/></button>
-                    </div>
-                )}
-
-                
-                {openNav ? (
-                    <nav className="navArea" ref={navRef}>
-                        <div className="closeArea">
-                            <button onClick={handleCloseNav}><MdOutlineClose /></button>
-                        </div>
-                        <ul className="navList">
-                            <label className="labelbuttonTheme">
-                                <input type="checkbox" className="checkbox" checked={dark} onChange={(e)=>changeThemes(e.target.checked)}/>
-                                <span className="buttonTheme">
-                                    {dark?(
-                                        <IoMoonOutline />
-                                    ):(
-                                        <IoSunnyOutline />
-                                    )}
-                                </span>
-                            </label>
-                            <a href="#projects">Projects</a>
-                            <a href="#about">About</a>
-                        </ul>
-                        <div className="copy">
-                            <span>&copy;By {value}</span>
-                        </div>
-                    </nav>
+            <header className="headerContainer">
+                <h4>&copy; By {value}</h4>
+                {!isOpenNav?(
+                    <button onClick={() => setIsOpenNav(true)}>
+                        <MdOutlineMenu />
+                    </button>
                 ):null}
-
             </header>
+
+            {isOpenNav ? (
+                <nav className="navContainer" ref={navRef}>
+                    <button className="close" onClick={closeNav}>
+                        <MdOutlineClose />
+                    </button>
+                    <ul className="ul">
+                        <button className="buttonTheme" onClick={() => changeThemes(!dark)} style={{ justifyContent: dark ? 'end' : 'start' }}>
+                            {!dark ? (
+                                <MdLightMode className="light" />
+                            ) : (
+                                <FaMoon className="dark" />
+                            )}
+                        </button>
+
+                        <button className="buttonLanguage" onClick={() => changeLanguage(!isBr)}>
+                            {isBr ? (
+                                <p><b>BR</b> / EN</p>
+                            ) : (
+                                <p><b>EN</b> / BR</p>
+                            )}
+                        </button>
+                    </ul>
+                    <span>&copy; By {value}</span>
+                </nav>
+            ) : null}
+
+            {isVisible && !isOpenNav?(
+                <button className="floatMenu" onClick={() => setIsOpenNav(true)}>
+                    <div>
+                        <MdOutlineMenu />
+                    </div>
+                </button>
+            ):null}
+
         </>
-    )
+    );
 }

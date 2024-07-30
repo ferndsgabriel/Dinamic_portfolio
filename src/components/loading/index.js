@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./index.css"
 
 export default function Loading() {
     const [index, setIndex] = useState(0);
@@ -32,7 +33,7 @@ export default function Loading() {
     };
 
     return (
-        <div style={{ width: '100%', height: '100vh', display:'flex', alignItems:'center', justifyContent:'center' }}>
+        <div className="containerLoading">
             {hellosIdiomues()}
         </div>
     );

@@ -1,254 +1,339 @@
 import './index.css';
 import Header from "../../components/header";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
+import { LanguageContext } from '../../contexts/languageControl';
 import Loading from "../../components/loading";
-
 import { FaGithub } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
+import ScrollTop from '../../components/scrollTop';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { toast } from 'react-toastify';
+import {isEmail} from 'validator';
+import emailjs from "@emailjs/browser";
 
-
-export default function Home(){
-    const [loading, setLoading] = useState (true);
-    const [about, setAbout] = useState ({});
-    const [skills, setSkills] = useState ([]);
-    const [projects, setProjects] = useState([]);
-    const [contacts, setContacts] = useState([]);
-    const [indexFilter, setIndexFilter] = useState(0);
+export default function Home() {
+    const [loading, setLoading] = useState(true);
+    const [loadingButton, setLoadingButton] = useState(false);
+    const { isBr } = useContext(LanguageContext);
+    const [data, setData] = useState(null);
+    const [viewLess, setViewLess] = useState(true);
     const projectsContainerRef = useRef(null);
-
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://portfbackend.vercel.app/date');
-                if (!response.ok) {
-                throw new Error('Erro ao buscar os dados');
-                }
-                const jsonData = await response.json();
-                setAbout(jsonData.About);
-                setSkills(jsonData.Skills);
-                setProjects(jsonData.Projects);
-                setContacts(jsonData.Contacts);
-            } catch (error) {
-                console.log(error)
-            } finally {
-                setTimeout(()=>{
+        async function getItens() {
+            setLoading(true);
+            setTimeout(async()=>{
+                try {
+                    const ptbr = await import('../../services/ptbr.json');
+                    const en = await import('../../services/en.json');
+    
+                    if (isBr) {
+                        setData(ptbr.default);
+                    } else {
+                        setData(en.default);
+                    }
+                } catch (error) {
+                    console.error("Error loading JSON files:", error);
+                } finally {
                     setLoading(false);
-                },2500)
-            }
-        };
-        fetchData();
-    }, []);
-    
-    const filterProjects = () =>{
-        const firstFive = projects.slice(0, 3);
-        const all = projects;
-
-        return [firstFive, all];
-    }
-
-    const observeElements = () => {
-        const myObserver1 = new IntersectionObserver((e)=>{
-            e.forEach(items =>{
-                if(items.isIntersecting){
-                    items.target.classList.add('animateOpenLeftRemove');
-                }else{
-                    items.target.classList.remove('animateOpenLeftRemove');
                 }
-            })
-        });
-        const elements1 = document.querySelectorAll('.animateOpenLeft');
-        if (elements1){
-            elements1.forEach((e)=>myObserver1.observe(e))
+            },1000)
         }
 
-        const myObserver2 = new IntersectionObserver((e)=>{
-            e.forEach(items2 =>{
-                if (items2.isIntersecting){
-                    items2.target.classList.add('animateInvisibleRemove');
-                }else{
-                    items2.target.classList.remove('animateInvisibleRemove');
-                }
-            })
-        });
-        const elements2 = document.querySelectorAll('.animateInvisible');
-        if (elements2){
-            elements2.forEach((e)=>myObserver2.observe(e));
-        }
+        getItens();
+    }, [isBr]); 
 
-        const myObserver3 = new IntersectionObserver((e)=>{
-            e.forEach(items =>{
-                if(items.isIntersecting){
-                    items.target.classList.add('animateOpenRightRemove');
-                }else{
-                    items.target.classList.remove('animateOpenRightRemove');
-                }
-            })
-        });
+    const viewMoreProjects = (value) => {
+        setViewLess(value);
 
-        const elements3 = document.querySelectorAll('.animateOpenRight');
-        if (elements3){
-            elements3.forEach((e)=>myObserver3.observe(e))
-        }
-    };
-    
-    const changeFilter = (value) => {
-        setIndexFilter(value);
-    
-        if (projectsContainerRef) {
+        if (projectsContainerRef.current) {
             projectsContainerRef.current.classList.remove('animationFilterProject');
-            void projectsContainerRef.current.offsetWidth;
+            void projectsContainerRef.current.offsetWidth; 
             projectsContainerRef.current.classList.add('animationFilterProject');
-    
+
             window.scrollTo({
                 top: projectsContainerRef.current.offsetTop,
                 behavior: 'smooth',
             });
         }
 
-        setTimeout(observeElements, 1000);
+        setTimeout(observeElements, 600);
     };
-    
+
+    const observeElements = () => {
+        const observers = [
+            { className: '.animateOpenLeft', addClass: 'animateOpenLeftRemove' },
+            { className: '.animateInvisible', addClass: 'animateInvisibleRemove' },
+            { className: '.animateOpenRight', addClass: 'animateOpenRightRemove' },
+        ];
+
+        observers.forEach(({ className, addClass }) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(addClass);
+                    } else {
+                        entry.target.classList.remove(addClass);
+                    }
+                });
+            });
+
+            document.querySelectorAll(className).forEach((el) => observer.observe(el));
+        });
+    };
+
     useEffect(() => {
-        if (!loading){
+        if (!loading) {
             observeElements();
         }
     }, [loading]);
+    
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 999999999999, min: 1366 },
+            items: 3
+        },
+        desktop: {
+            breakpoint: { max: 1366, min: 768 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 768, min: 600 },
+            items: 1
+        },
+        mobile: {
+            breakpoint: { max: 600, min: 0 },
+            items: 1
+        }
+    };
 
+    async function sendEmail(e){
+        e.preventDefault();
+        if (!name || !email || !message){
+            toast.warning(isBr?'Preencha todos os campos':'Fill in all fields');
+            return;
+        }
 
-
-
-    if (loading){
-        return (
-            <Loading/>
-        )
+        if (!isEmail(email)){
+            toast.warning(isBr?'Digite um endereço de e-mail válido' : 'Enter a valid email address');
+            return;
+        }
+        setLoadingButton(true);
+        
+        const serviceId = process.env.REACT_APP_SERVICE;
+        const templateId = process.env.REACT_APP_TEMPLATE;
+        const publicKey = process.env.REACT_APP_PUBLICKEY;
+        
+        emailjs.init(publicKey);
+        
+        const dataEmail = {
+            Name:name,
+            From:email,
+            Message:message
+        }
+        
+        await emailjs.send(serviceId, templateId,dataEmail).then(()=>{
+            toast.success(isBr?'E-mail enviado com sucesso' : 'Email successfully sent');
+            setEmail('');
+            setName('');
+            setMessage('');
+        }).catch((error)=>{
+            toast.error(isBr?'Erro ao enviar e-mail':'Error sending email');
+            console.log(error)
+        }).finally(()=>{
+            setLoadingButton(false);
+        })
     }
 
-    return(
+
+    if (loading || data === null) {
+        return <Loading />;
+    }
+
+    return (
         <>  
-            {about?(
-                <Header value={about.Nick}/>
-            ):null}
+            <ScrollTop/>
+            <Header value={'Ferndsgabriel'} />
             <main className="main">
-                {about ?(
+                {data.Presentation ? (
                     <section className="section1">
                         <div className="section1Container">
-                                <h1 className='h1-1 animateOpenLeft'>I'm</h1>
-                                <h1 className='h1-2 animateOpenLeft'>
-                                    {about.Title}
-                                    <span> .</span>
+                            <div>
+                                <h1 className='h1-1 animateOpenLeft'>
+                                    {isBr? 'Olá, eu sou' : "Hi, i'm" }
                                 </h1>
+                                <h1 className='h1-2 animateOpenLeft'>
+                                    {data.Presentation.Resume}
+                                </h1>
+                            </div>
                         </div>
                     </section>
                 ):null}
 
-                {about ? (
+                {data.About && (
                     <section className='section2' id='about'>
                         <div className='section2Container'>
-                            <h2 className='animateOpenRight'>About me</h2>
+                            <h2 className='animateOpenRight'>
+                                {isBr? 'Sobre mim' : 'About me'}
+                            </h2>
                             <div className='AreaItens'>
-                                <span className='imgMask'>
-                                    <span className='imgMask2 animateOpenRight'>
-                                        <img src={about.ProfilePhoto} alt={about.Name}/>
-                                    </span>
+                                <span className='imgMask animateOpenRight'>
+                                    <img src={data.Perfil} alt={"Perfil"} />
                                 </span>
 
                                 <div className='aboutInfos animateOpenRight'>
-                                    <p className='animateOpenRight'>My name is <b>{about.Name}</b></p>
-                                    <p className='text animateOpenRight'>{about.About2}</p>
+                                    <p className='animateOpenRight'>{isBr? 'Meu nome é ' : 'My name is '} 
+                                        <b>{data.About.Name}</b>
+                                    </p>
+                                    <p className='text animateOpenRight'>{data.About.Text}</p>
 
                                     <div className='contacts'>
-                                        {contacts.length > 0 ?(
-                                            <>
-                                                {contacts.map((item, index)=>{
-                                                    return(
-                                                        <article key={item.Id}>
-                                                            {item.TypePhone?(
-                                                                <a href={`tel:${item.Direction}`} target='_blank'>{item.Plataform}</a>
-                                                            ):(
-                                                                <a href={item.Direction} target='_blank'>{item.Plataform}</a>
-                                                            )}
-                                                        </article>
-                                                    )
-                                                })}
-                                            </>
-                                        ):null}
+                                        {data.Links && data.Links.length > 0 && data.Links.map((item, index) => (
+                                            <article key={index}>
+                                                <a href={item.Url} target='_blank' rel="noopener noreferrer">{item.Name}</a>
+                                            </article>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
                         </div>  
                     </section>
-                ):null}
+                )}
 
-                {skills.length > 0 ?(
+                {data.Skills.Itens && data.Skills.Itens.length > 0 && (
                     <section className='section3'>
                         <div className='section3Container'>
-                            <h2 className='animateOpenLeft'>Skills</h2>
+                            <h2 className='animateOpenLeft'>
+                                {isBr? 'Habilidades' : 'Skills'}
+                            </h2>
                             <div className='skillsContainer'>
-                                {skills.map((item2, index2)=>{
-                                    return(
-                                        <div key={item2.Id} className='skillsArea animateOpenLeft'>
-                                            <img src={item2.Icon} alt={item2.Name}/>
-                                            <p>{item2.Name}</p>
-                                        </div>
-                                    )
-                                })}
+                                {data.Skills.Itens.map((item, index) => (
+                                    <div key={index} className='skillsArea animateOpenLeft'>
+                                        <img src={item.Url} alt={item.Name} />
+                                        <p>{item.Name}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </section>  
-                ):null}
+                )}
 
-                {projects.length > 0 ?(
+                {data.Projects.Itens && data.Projects.Itens.length > 0 && (
                     <section className='section4' id='projects'>
                         <div className='section4Container'>
-                            <h2 className='animateOpenRight'>Projects</h2>
+                            <h2 className='animateOpenRight'>{isBr? 'Projetos' : 'Projects'} - {data.Projects.Itens.length}</h2>
                             <div className='containerProjects animationFilterProject' ref={projectsContainerRef}>
-                                {filterProjects()[indexFilter].map((item, index)=>{
-                                    return(
-                                        <article key={item.Id} className='projectsArea animateOpenRight' >
-                                            <div className='projectsInfo'>
-                                                <h3>Project {index + 1}</h3>
-                                                <h4>{item.Name}</h4>
-                                                <p>{item.Description}</p>
-                                                <div className='projectsLinks'>
-                                                    <a href={item.GitHub} target='_Blank'><FaGithub/></a>
-                                                    <a href={item.Deploy} target='_Blank'><FaArrowRight /> Project</a>
-                                                </div>
-                                            </div>
-                                            <div className='imgProjectArea'>
-                                                <span className='imgMask'>
-                                                    <span className='imgMask2'>
-                                                            <img src={item.Image} alt={item.Name}/>
-                                                    </span>
-                                                </span>
-                                            </div>
-
-                                        </article>
-                                    )
-                                })}
+                                {data.Projects.Itens.slice(0, !viewLess ? data.Projects.Itens.length : 3).map((item, index) => (
+                                    <article key={index} className='projectsArea animateOpenRight'>
+                                        <h3>{item.Name}</h3>
+                                        <p>{item.Description}</p>
+                                        <div className='technologiesArea'>
+                                            {item.Technologies && item.Technologies.length > 0 && item.Technologies.map((tech, index) => (
+                                                <img src={tech} alt='icon' key={index} />
+                                            ))}
+                                        </div>
+                                        <img src={item.Image} alt={item.Name} className='projectImage' />
+                                        <div className='projectLinks'>
+                                            <a target='_blank' rel="noopener noreferrer" href={item.GitHub}><FaGithub /></a>
+                                            <a target='_blank' rel="noopener noreferrer" href={item.Deploy}><FaArrowRight /></a>
+                                        </div>
+                                    </article>
+                                ))}
                             </div>
-                            {indexFilter === 0 ?(
-                                <button onClick={()=>changeFilter(1)}
-                                className='buttonFilterProjects'>View all</button>
-                            ):(
-                                <button onClick={()=>changeFilter(0)}
-                                className='buttonFilterProjects'>Less</button>
+                            {viewLess ? (
+                                <button onClick={() => viewMoreProjects(false)} className='buttonFilterProjects animateOpenRight'>
+                                    {isBr? 'Ver mais' : 'Show more'}
+                                </button>
+                            ) : (
+                                <button onClick={() => viewMoreProjects(true)} className='buttonFilterProjects animateOpenRight'>
+                                    {isBr? 'Ver menos' : 'Show less'}
+                                </button>
                             )}
                         </div>
                     </section>
-                ):(
-                    null
                 )}
+
+                {data.Certificates && data.Certificates.length > 0?(
+                    <section className='section5'>
+                        <div className='section5Container'>
+                            <h2 className='animateOpenLeft'>
+                                {isBr? 'Certificados' : 'Certificates'} 
+                            </h2>
+                            <Carousel responsive={responsive} className='animateOpenLeft'>
+                                {data.Certificates.map((item, index)=>{
+                                    return(
+                                        <a key={index}
+                                        className='containerCertificate' 
+                                        data-description={item.Description}
+                                        href={item.Link} target='_blank'>
+                                            <h3>{item.Name} </h3> 
+                                            <img src={item.Image} alt={item.Name}
+                                            className='img'/>
+                                        </a>
+                                    )
+                                })}
+                            </Carousel>
+                        </div>
+                    </section>
+                ):null}
+
+                <section className='section6'>
+                    <div className='section6Container'>
+                        <h2 className='animateOpenRight'>{isBr? 'Me mande uma mensagem' : 'Send me a message'}</h2>
+                        <p>
+                            {isBr?'Tem uma pergunta ou proposta ou apenas quer dizer algo? Vá em frente.':
+                            'Do you have a question or proposal or just want to say something? Go ahead.'}
+                        </p>
+                        <form className='sendEmail-form' onSubmit={sendEmail}>
+                            <label className='labelForm animateOpenRight'>
+                                <span>{isBr? 'Seu nome' : 'Your names'}</span>
+                                <input type='text' required={true} minLength={3} maxLength={60}
+                                placeholder={isBr?'Digite seu nome':'Enter your names'}
+                                value={name} onChange={(e)=>setName(e.target.value)}/>
+                            </label>
+
+                            <label className='labelForm animateOpenRight'>
+                                <span>{isBr? 'Seu email' : 'Your email'}</span>
+                                <input type='text' required={true} minLength={6} maxLength={60}
+                                placeholder={isBr?'Digite seu email':'Enter your email'}
+                                value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                            </label>
+
+                            <label className='labelForm animateOpenRight'>
+                                <span>{isBr? 'Sua mensagem' : 'Your message'}</span>
+                                <textarea type='text' required={true} minLength={3} maxLength={600}
+                                placeholder={isBr?'Digite sua mensagem':'Enter your message'}
+                                value={message} onChange={(e)=>setMessage(e.target.value)}/>
+                            </label>
+
+                            <button type='submit' className='animateOpenRight' disabled={loadingButton}>Enviar</button>
+                        </form>
+                    </div>
+                </section>
+
 
                 <footer className='footer animateInvisible'>
                     <div className='footerContainer'>
-                        <h3>Contact me</h3>
-                        <a href='https://drive.google.com/drive/folders/1ahWmDkGSpGq6Uh_YInjREO0NWXpRtopH?usp=sharing'
-                        target='_blank'>View Resume</a>
+
+                        <div className='linksFooter'>
+                            <a href='https://drive.google.com/drive/folders/1ahWmDkGSpGq6Uh_YInjREO0NWXpRtopH?usp=sharing' target='_blank' rel="noopener noreferrer">
+                                View Resume
+                            </a>
+                            <div className='linksContacts'>
+                                {data.Links && data.Links.length > 0 && data.Links.map((item, index) => (
+                                    <article key={index}>
+                                        <a href={item.Url} target='_blank' rel="noopener noreferrer">{item.Name}</a>
+                                    </article>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </footer>
-
             </main>
         </>
-    )
+    );
 }

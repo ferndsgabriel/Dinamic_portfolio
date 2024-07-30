@@ -1,7 +1,12 @@
 import {RoutesApp} from "./routes";
 import './App.css';
-import ThemeProvider from './middlewares/themeColor';
+import ThemeProvider from "./contexts/themeColor";
+import LanguageProvider from "./contexts/languageControl";
 import { useRef, useEffect } from "react";
+import React from 'react';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const blurScrollRef = useRef(null);
@@ -25,8 +30,22 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider>
-        <span ref={blurScrollRef} className="animate"></span>
-        <RoutesApp/>
+        <LanguageProvider>
+          <RoutesApp/>
+          <ToastContainer
+            position="top-right"
+            autoClose={1500}
+            limit={1}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            />
+        </LanguageProvider>
       </ThemeProvider>
     </div>
   );
