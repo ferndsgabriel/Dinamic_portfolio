@@ -72,11 +72,68 @@
             "Description": "NewTech TVS is a landing page developed for a television repair service. The project features contact links, information about the services offered, and customer reviews."
             },
 
-            {"Name": "Wpp Link", "Technologies": ["https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5","https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm","https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"], 
-            "Image": "https://lh3.googleusercontent.com/d/1J2mz8NATQOAuLmO-zpYTdl3N36GSz97v", 
-            "GitHub": "https://github.com/ferndsgabriel/wppLinkGenerator", 
-            "Deploy": "https://linkgeneratorwpp.vercel.app/",
-            "Description": "This project generates WhatsApp links using the provided phone numbers and custom messages, to facilitate contact with businesses."
+            {
+                "Name": "Wpp Link",
+                "Technologies": [
+                    "https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5",
+                    "https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm",
+                    "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"
+                ],
+                "Image": "https://lh3.googleusercontent.com/d/1J2mz8NATQOAuLmO-zpYTdl3N36GSz97v",
+                "GitHub": "https://github.com/ferndsgabriel/wppLinkGenerator",
+                "Deploy": "https://linkgeneratorwpp.vercel.app/",
+                "Description": "This is a quick link generator for WhatsApp, allowing you to view the result and generate a QR code."
+            },
+
+            {
+                "Name": "Palmeiras Game",
+                "Technologies": [
+                    "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk",
+                    "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
+                    "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w"
+                ],
+                "Image": "https://lh3.googleusercontent.com/d/1Qfz7GN1KF9Yf_4MXuQX_aLv7nEH5J8sI",
+                "GitHub": "https://github.com/ferndsgabriel/Palmeiras_Game",
+                "Deploy": "https://palmeiras-game.vercel.app/",
+                "Description": "This is a simple guessing game themed around the Brazilian football team Palmeiras. The project is simple but fun."
+            },
+
+            {
+                "Name": "Joken-Po",
+                "Technologies": [
+                    "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk",
+                    "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w"
+                ],
+                "Image": "https://lh3.googleusercontent.com/d/1OjNKqbnoeKiy_us3hZ5snLI47IWqvh_I",
+                "GitHub": "https://github.com/ferndsgabriel/JokenPo",
+                "Deploy": "https://thejokenpo.vercel.app/",
+                "Description": "This is an interactive Rock-Paper-Scissors game. You can play against the computer and test your luck."
+            },
+
+            {
+                "Name": "Learning Line",
+                "Technologies": [
+                    "https://lh3.googleusercontent.com/d/17-zWgr-hSq8NgsPAepWUDTg6cRDJO9D5",
+                    "https://lh3.googleusercontent.com/d/1jL0jcM-f_LhuPftN-OAQyOVuL86MVjOk",
+                    "https://lh3.googleusercontent.com/d/168JjYSFLB0ESlwvH9fN3ldsjJ_8Gx4Fm"
+                ],
+                "Image": "https://lh3.googleusercontent.com/d/1cHWJq3TnKDOBAhZEmy6zofoS6DlSIxq4",
+                "GitHub": "https://github.com/ferndsgabriel/LearningLine",
+                "Deploy": "https://learningline.vercel.app/",
+                "Description": "An interactive landscape inspired by the Mario game style, where the character advances through technologies I've learned. Each stage introduces new technologies in a playful manner."
+            },
+            
+            {
+                "Name": "Insta Valorant",
+                "Technologies": [
+                    "https://lh3.googleusercontent.com/d/1ucUAUEUjG-Ri0fNMbuG-ZlWbwz14LdXU",
+                    "https://lh3.googleusercontent.com/d/1Hu4j-OLyZxabaUXFmzUi8J3FesbTJg9w",
+                    "https://lh3.googleusercontent.com/d/1HCKs4gppBrXxXk7uZvNQGHofGYrRRuku"
+                ],
+                "Image": "https://lh3.googleusercontent.com/d/1nliapH_964IHUyeVY-fKEF1J3T2jeo5P",
+                "GitHub": "https://github.com/ferndsgabriel/Insta_Valorant",
+                "Deploy": "https://instagramvalorant.vercel.app/",
+                "Description": "This project is inspired by the Instagram feed but with posts and stories of Valorant agents. In the project, you can interact by liking posts and watching stories."
             }
         ]
     },
