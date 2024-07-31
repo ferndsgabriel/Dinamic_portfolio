@@ -8,15 +8,15 @@
 }
 
 @font-face {
-  font-family: 'Default';
-  src: url("/public/SFNSText-Regular.otf");
+  font-family: "Default";
+  src: url("/public/font.otf"), format("otf");
 }
 
 body{
   overflow-x: hidden;
   background-color:var(--Primary);
   color: var(--Text);
-  font-family: 'Default', Arial, Helvetica, sans-serif;
+  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 html{
