@@ -7,12 +7,16 @@
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Default';
+  src: url("/public/SFNSText-Regular.otf");
+}
 
 body{
   overflow-x: hidden;
   background-color:var(--Primary);
   color: var(--Text);
-  font-family: sans-serif;
+  font-family: 'Default', Arial, Helvetica, sans-serif;
 }
 
 html{
