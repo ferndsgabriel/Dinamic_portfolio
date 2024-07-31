@@ -290,7 +290,7 @@ export default function Home() {
                         </p>
                         <form className='sendEmail-form' onSubmit={sendEmail}>
                             <label className='labelForm animateOpenRight'>
-                                <span>{isBr? 'Seu nome' : 'Your names'}</span>
+                                <span>{isBr? 'Seu nome' : 'Your name'}</span>
                                 <input type='text' required={true} minLength={3} maxLength={60}
                                 placeholder={isBr?'Digite seu nome':'Enter your names'}
                                 value={name} onChange={(e)=>setName(e.target.value)}/>
