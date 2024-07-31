@@ -1,4 +1,4 @@
- ### Portfolio - Frontend ✍🏼
+ ### Portfolio  ✍🏼
 
 
 [![Blog](https://img.shields.io/website?label=Deploy&style=for-the-badge&url=https://ferndsgabriel.dev/)](https://ferndsgabriel.dev/)
@@ -6,7 +6,7 @@
 <div>
     <h2>About 🚨</h2>
     <p>
-        This is my primary portfolio, distinguished by its dynamism. It features a backend where I handle all CRUD operations for the information I wish to showcase. Throughout the development process, I highlight my proficiency in both frontend using React and backend with Node.js.
+    This is my project portfolio, which includes a section about my story. The project was developed using ReactJS, CSS, and some libraries for scroll effects and email sending.
     </p>
 </div>
 <div>
@@ -33,9 +33,9 @@
 ``` 
 ```bash
     # start Project
-    $ yarn dev
+    $ yarn start
 ```   
 ```bash
     # start Project, if use npm
-    $ npm run dev
+    $ npm run start
 ``` 
